@@ -1,0 +1,49 @@
+int x,y;
+void main() {
+
+  TRISB.RB0=0;
+  TRISB.RB1=1;
+  PORTB.RB0=0;
+ 
+ for(;;) {
+ 
+ if(PORTB.RB1==1)  {
+
+                  for (x=0; x<170; x++){
+ PORTB.RB0=1;
+                  for (y=0;y<x;y++)
+                  delay_us(10);
+ PORTB.RB0=0;
+                  for (y=0;y<x;y++)
+                     delay_us(10);
+    }       }
+   
+   else
+   RB1_bit==0;
+
+ 
+  }
+}
+
+FİRE ALARM SOUND:
+void main() {
+   int x,y; 
+   TRISB=0B00000010;
+   PORTB.RB0=0;
+    for(;;) {
+    if(RB1_bit==1){
+    for (x=0; x<15; x++)
+   {
+    portb.f0=1;
+    for (y=0;y<x;y++)
+      delay_us(70);
+      portb.f0=0; 
+      for (y=0;y<x;y++)
+       delay_us(5);
+        } }
+        else
+         RB1_bit==0;
+        }
+}
+
+
